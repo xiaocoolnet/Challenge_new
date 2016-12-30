@@ -59,6 +59,8 @@ public class Messages extends Fragment implements View.OnClickListener{
                                 msgBean.setMy_face(dataObject.getString("my_face"));
                                 msgBean.setOther_face(dataObject.getString("other_face"));
                                 msgBean.setOther_nickname(dataObject.getString("other_nickname"));
+                                msgBean.setLast_content(dataObject.getString("last_content"));
+                                msgBean.setMy_nickname(dataObject.getString("my_nickname"));
                                 msgBeans.add(msgBean);
                             }
                         }
