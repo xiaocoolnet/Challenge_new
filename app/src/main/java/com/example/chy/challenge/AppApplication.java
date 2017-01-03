@@ -5,6 +5,9 @@ import android.content.Context;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.blankj.utilcode.utils.CrashUtils;
+import com.blankj.utilcode.utils.LogUtils;
+import com.blankj.utilcode.utils.Utils;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -29,6 +32,9 @@ public class AppApplication extends Application {
         requestQueue = Volley.newRequestQueue(this);
         requestQueueFile = Volley.newRequestQueue(this);
         initImageLoader();
+        Utils.init(applicationContext);
+        CrashUtils.getInstance().init();
+        LogUtils.getBuilder().setTag("MyTag").setLog2FileSwitch(true).create();
     }
 
     private void initImageLoader() {

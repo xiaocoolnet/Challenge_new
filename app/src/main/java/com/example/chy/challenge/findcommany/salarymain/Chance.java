@@ -36,6 +36,7 @@ import com.example.chy.challenge.findcommany.Work_Searching;
 import com.example.chy.challenge.findcommany.chance.Find_Job;
 import com.example.chy.challenge.findcommany.chance.Find_work;
 import com.example.chy.challenge.findcommany.chance.Search_company;
+import com.example.chy.challenge.findcommany.location.CityPickerActivity;
 import com.example.chy.challenge.pnlllist.PullToRefreshBase;
 import com.example.chy.challenge.pnlllist.PullToRefreshListView;
 
@@ -85,7 +86,7 @@ public class Chance extends Fragment implements View.OnClickListener {
         location_city = (WaveView) view.findViewById(R.id.talent_location_city);//定位当前
         location_city.setOnClickListener(this);
         tv_now_location = (TextView) view.findViewById(R.id.talent_now_location);//tv当前地理位置
-
+        tv_now_location.setOnClickListener(this);
         salary_retrieva = (WaveView) view.findViewById(R.id.salary_retrieva);//分类
         salary_retrieva.setOnClickListener(this);
         salary_search = (WaveView) view.findViewById(R.id.salary_search);//搜索
@@ -143,6 +144,10 @@ public class Chance extends Fragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
+            case R.id.talent_now_location://选择定位城市
+                intent = new Intent(mContext, CityPickerActivity.class);
+                startActivity(intent);
+                break;
         }
     }
     public void getIntentView1() {

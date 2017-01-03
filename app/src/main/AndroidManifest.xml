@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <!--location-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <application
         android:name=".AppApplication"
         android:allowBackup="true"
@@ -84,6 +86,9 @@
         <activity android:name=".Findpersoanl.mine.SelectSkillTagActivity" />
         <activity android:name=".Findpersoanl.mine.EditInfoLongActivity" />
         <activity android:name=".Findpersoanl.mine.MyInvitationAllActivity"></activity>
+        <activity android:name=".findcommany.location.CityPickerActivity"/>
+        <service android:name=".service.LocationService"/>
+
     </application>
 
 </manifest>
